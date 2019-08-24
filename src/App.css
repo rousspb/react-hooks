@@ -1,33 +1,37 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: 'Penna';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Penna'), local('Penna'), url('./fonts/penna.otf') format('opentype');
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #f9f9fb;
+  font-family: 'Penna';
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+button {
+  outline: none;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  width: calc(60%);
+  display: block;
+  outline: none;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+  z-index: 2;
 }
